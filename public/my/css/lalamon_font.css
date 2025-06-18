@@ -1,0 +1,6 @@
+.navbar-brand {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px; /* 폰트 크기 조정 */
+    color: #ff7f00; /* 포켓몬의 오렌지색 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 약간의 그림자 효과 */
+  }

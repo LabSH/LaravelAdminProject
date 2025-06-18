@@ -1,0 +1,64 @@
+.custom-navbar {
+    background-color: #F5F6CE !important; /* 노란색 배경 */
+      border-bottom-left-radius: 15px; /* 왼쪽 하단 라운드 */
+      border-bottom-right-radius: 15px; /* 오른쪽 하단 라운드 */
+    }
+    
+    .custom-navbar .nav-link:focus {
+    outline: none !important; /* 테두리 제거 */
+    box-shadow: none !important; /* 클릭 시 그림자 제거 */
+    }
+  
+    .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa; /* 배경색은 기본으로 유지 (혹은 원하시는 색으로 설정) */
+    color: #FF4C00 !important; /* 텍스트 색상을 오렌지색으로 변경 */
+  }
+  
+    .navbar-nav .nav-item .nav-link.dropdown-toggle:hover,
+    .navbar-nav .nav-item .nav-link.dropdown-toggle:focus,
+    .navbar-nav .nav-item .nav-link.dropdown-toggle:active {
+      color: #FF4C00;  /* 오렌지색으로 텍스트 색상 변경 */
+    }
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav-link {
+      color: #000000; /* 검은색 글씨 */
+    }
+  
+    .custom-navbar .nav-link:hover {
+      color: #FF4C00 ; /* 포켓몬 스타일로 호버 시 오렌지색*/
+    }
+    .navbar {
+      flex-direction: column;  /* 수직으로 배치 */
+      align-items: flex-start; /* 왼쪽 정렬 */
+    }
+    
+    .navbar-nav {
+      width: 50%; /* 네비게이션 너비를 100%로 설정 */
+      display: flex;
+      flex-direction: column; /* 항목을 세로로 배치 */
+    }
+  
+    .nav-item {
+      width: 20%; /* 각 항목의 너비를 100%로 설정 */
+      margin: 1px 0; /* 항목 간 여백 추가 */
+    
+    }
+    
+  
+    .nav-link {
+      display: flex;
+      flex-direction: column; /* 아이콘과 텍스트를 수직으로 정렬 */
+      align-items: center; /* 아이콘과 텍스트를 가운데 정렬 */
+      padding: 1px 2px ; /* 위아래 여백 추가 */
+      font-size: 16px; /* 폰트 크기 설정 */
+    }
+  
+    .nav-link i {
+      font-size: 24px; /* 아이콘 크기 조정 */
+      
+    }
+    
+    /* 햄버거 메뉴 아이콘을 검은색으로 변경 */
+  .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath fill="%23000000" d="M5 6h20c.553 0 1 .447 1 1s-.447 1-1 1H5c-.553 0-1-.447-1-1s.447-1 1-1zm0 7h20c.553 0 1 .447 1 1s-.447 1-1 1H5c-.553 0-1-.447-1-1s.447-1 1-1zm0 7h20c.553 0 1 .447 1 1s-.447 1-1 1H5c-.553 0-1-.447-1-1s.447-1 1-1z"%3E%3C/path%3E%3C/svg%3E');
+  }

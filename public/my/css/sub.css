@@ -1,0 +1,16 @@
+.mycolor1 { background-color: #F5F6CE !important; color: black !important; }
+.mycolor2 { background-color: #F5F6CE !important; color: black !important; }
+.mycolor3 { background-color: #F5F6CE !important; color: black !important; }
+.mythumb_box {
+  border-radius: 15px; /* 박스의 모든 꼭짓점을 15px만큼 둥글게 */
+  overflow: hidden; /* 라운드 처리된 부분을 잘라내어 이미지나 텍스트가 밖으로 나오지 않도록 처리 */
+}
+.mythumb_image {
+  border-radius: 15px; /* 이미지의 꼭짓점을 15px만큼 둥글게 */
+}
+.mythumb_text {
+  border-radius: 15px 15px 15px 15px; /* 텍스트 박스의 하단 두 꼭짓점만 둥글게 */
+}
+.mythumb_box:hover {
+  transform: scale(1.1); /* 마우스를 올리면 박스가 1.1배로 확대됨 */
+}

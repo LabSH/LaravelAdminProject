@@ -1,0 +1,56 @@
+1) 모델 생성 : php artisan make:model Worker –m
+
+2) 테이블 정의 : database/migrations 폴더의 2024_11_...create_workers_table.php 수정
+
+id나 입력날짜 수정날짜 같은 부가적인것은 자동으로 해준다.
+$table->string('name',20);
+$table->string('phone',11);
+$table->string('gender',10);
+                            
+string자료형으로 선언후 크기를 정의하는게 varchar()
+
+3) 테이블 생성 : php artisan migrate
+
+4) app/Model의  Worker.php : fillable property 수정 
+
+    use HasFactory;
+    protected $fillable = [
+        'name',
+        'phone',
+        'gender',
+    ];
+
+자신이 수정하거나 직접적으로 사용하는 컬럼만 입력한다.
+
+5) phpmyadmin에서 “worker_data.txt”파일을 import 하기
+
+형식 : CSV
+열(컬럼) 구분자 : \t
+열(컬럼) 감싸기 : 공백
+나머지 그대로
+
+
+6) WorkerController.php 컨트롤러 만들기
+
+    1. MemberController 복붙 바꾸기로  member –> worker , Member -> Worker 바꾸기
+    2. 그후 형식에 맞게 수정(자세한건 WorkerController 참고)
+
+7) Worker Route 등록하기
+
+    // 라우트등록14(worker)
+    use App\Http\Controllers\WorkerController;
+    // 라우트등록14(worker)
+    Route::resource('worker',WorkerController::class);
+
+8) Worker 메뉴 만들고 연결하기
+
+    Ajax다음줄에 만들면된다.
+    만약 글만 a태그 할 경우 크기가 안맞을 수 있다.(bi bi 만 크기가 맞음)
+    <i class="bi bi-star-fill"></i> (시험볼때 사용할 아이콘(별))
+    <li class="nav-item"><a class="nav-link" href="{{route('worker.index')}}"><i class="bi bi-bell"></i>Worker</a></li>
+
+9) resource/views/Worker폴더 만들고 index, create, edit, show 만들기
+    member폴더에 있는것을 참고해 복붙하고 형식에 맞게 바꾸기
+    (변수명, 컬럼명, 에러메세지 등등)
+
+끝.
